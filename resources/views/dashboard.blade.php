@@ -48,7 +48,7 @@
         setInterval(getDataStatus, 5000);
       });
 
-      const url = "{{ config('app.url') }}";
+      const url = "{{ config('app.api_url') }}";
       console.log(url);
 
       const getDataStatus = () => {
