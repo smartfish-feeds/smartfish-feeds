@@ -48,14 +48,17 @@
         setInterval(getDataStatus, 5000);
       });
 
+      const url = "{{ config('app.url') }}";
+      console.log(url);
+
       const getDataStatus = () => {
-        $.get('/api/schedule/done').done(data => { // ajax hit endpoint: GET api/switch/{id} (endpoint show)
+        $.get(`/api/schedule/done`).done(data => { // ajax hit endpoint: GET api/switch/{id} (endpoint show)
           $('#text-status').html(data); // merubah text html pada id:text-status sesuai data yang didapat.
         })
       }
 
       const getDataSystem = () => {
-        $.get('/api/switch/1').done(data => { // ajax hit endpoint: GET api/switch/{id} (endpoint show)
+        $.get(`/api/switch/1`).done(data => { // ajax hit endpoint: GET api/switch/{id} (endpoint show)
 
           // jika status switch bernilai true
           if (data.status) {
@@ -74,7 +77,7 @@
       }
 
       const updateDataSystem = () => {
-        $.post('/api/switch/1', { _method: 'PUT' }) // ajax hit endpoint: PUT api/switch/{id} (endpoint update)
+        $.post(`/api/switch/1`, { _method: 'PUT' }) // ajax hit endpoint: PUT api/switch/{id} (endpoint update)
           .done(data => {
             getDataSystem();
           })
