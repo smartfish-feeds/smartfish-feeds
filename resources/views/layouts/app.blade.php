@@ -11,8 +11,6 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -36,7 +34,6 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="{{ asset('js/script.js') }}"></script>
         {{ $script ?? '' }}
     </body>
 </html>
