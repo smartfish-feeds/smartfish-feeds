@@ -5,7 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\Schedule;
 
-class ScheduleController extends Controller
+class ApiScheduleController extends Controller
 {
     public function index()
     {

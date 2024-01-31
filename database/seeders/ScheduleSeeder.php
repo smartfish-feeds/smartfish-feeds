@@ -31,6 +31,13 @@ class ScheduleSeeder extends Seeder
                 'created_at' => $now,
                 'updated_at' => $now,
             ],
+            [
+                'name' => 'Makan Sore',
+                'time' => '16:00',
+                'status' => config('status.schedule.undone'),
+                'created_at' => $now,
+                'updated_at' => $now,
+            ],
         ];
 
         Schedule::insert($schedules);

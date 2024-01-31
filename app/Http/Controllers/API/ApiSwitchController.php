@@ -5,7 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\SwitchMaster;
 
-class SwitchController extends Controller
+class ApiSwitchController extends Controller
 {
     public function index()
     {

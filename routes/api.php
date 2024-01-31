@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\API\ScheduleController;
-use App\Http\Controllers\API\SwitchController;
+use App\Http\Controllers\API\ApiScheduleController;
+use App\Http\Controllers\API\ApiSwitchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Route;
  * prefix: api/switch
  */
 Route::prefix('switch')->group(function () {
-    Route::get('/', [SwitchController::class, 'index'])->name('switch.index');
-    Route::get('/{id}', [SwitchController::class, 'show'])->name('switch.show');
-    Route::put('/{id}', [SwitchController::class, 'update'])->name('switch.update');
+    Route::get('/', [ApiSwitchController::class, 'index'])->name('switch.index');
+    Route::get('/{id}', [ApiSwitchController::class, 'show'])->name('switch.show');
+    Route::put('/{id}', [ApiSwitchController::class, 'update'])->name('switch.update');
 });
 
 /**
@@ -30,8 +30,8 @@ Route::prefix('switch')->group(function () {
  * prefix: api/schedule
  */
 Route::prefix('schedule')->group(function () {
-    Route::get('/', [ScheduleController::class, 'index'])->name('schedule.index');
-    Route::get('/done', [ScheduleController::class, 'getDone'])->name('schedule.done');
-    Route::get('/{id}', [ScheduleController::class, 'show'])->name('schedule.show');
-    Route::put('/{id}', [ScheduleController::class, 'update'])->name('schedule.update');
+    Route::get('/', [ApiScheduleController::class, 'index'])->name('schedule.index');
+    Route::get('/done', [ApiScheduleController::class, 'getDone'])->name('schedule.done');
+    Route::get('/{id}', [ApiScheduleController::class, 'show'])->name('schedule.show');
+    Route::put('/{id}', [ApiScheduleController::class, 'update'])->name('schedule.update');
 });

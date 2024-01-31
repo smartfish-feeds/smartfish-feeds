@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Schedule extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'time',
+        'status',
+    ];
+
+    public function getTimeAttribute($value)
+    {
+        return substr($value, 0, 5);
+    }
 }
